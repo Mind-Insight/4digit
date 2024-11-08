@@ -1,0 +1,39 @@
+.Main {
+    padding-top: 48px;
+}
+
+.Main_title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.Main_titleText {
+    font-family: 'SF-Pro';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.Main_titleDate {
+    width: 352px;
+    height: 64px;
+    background-color: #EEEEF1;
+    border-radius: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Main_textDate {
+    font-family: 'SF-Pro';
+}
+
+.Main_calendar {
+    width: 20px;
+    height: 19px;
+}
+
+.Main_arrow {
+    width: 18px;
+    height: 10px;
+}

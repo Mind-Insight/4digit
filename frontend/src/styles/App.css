@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F7F9FB;
+    padding: 32px;
+    padding-top: 40px;
+}
+
+@font-face {
+    font-family: 'SF-Pro';
+    src: url('./../fonts/SF-Pro.ttf');
+}
