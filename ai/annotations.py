@@ -8,6 +8,7 @@ def load_pkl_file(file_path):
     return (data, data_trans)
 
 
+<<<<<<< HEAD
 annotations, transcriptions = load_pkl_file("dataset/annotation_training.pkl")
 
 parse = {}
@@ -27,3 +28,7 @@ for key in transcriptions:
     parse[key].append(transcriptions[key])
 
 print(parse)
+=======
+annotations = load_pkl_file("dataset/annotation_training.pkl")
+print(annotations["interview"])
+>>>>>>> 73b085efb588b97c9121738fd7cd091d4d000ead
