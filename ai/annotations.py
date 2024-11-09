@@ -8,3 +8,4 @@ def load_pkl_file(file_path):
 
 
 annotations = load_pkl_file("dataset/annotation_training.pkl")
+print(annotations["interview"])
