@@ -1,0 +1,35 @@
+.Job_btn {
+    width: 40px;
+    height: 40px;
+    background-color: #6179FB;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Job_single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 30px;
+    border: 2px solid #EEEEF1;
+}
+
+.Job_name {
+    font-size: 20px;
+    font-family: "SF-Pro";
+}
+
+.Job_title {
+    font-size: 32px;
+    font-family: "SF-Pro";
+    margin-left: 32px;
+}
+
+.Job {
+    background-color: #FFF;
+    border-radius: 45px;
+    padding: 40px 16px 16px;
+}

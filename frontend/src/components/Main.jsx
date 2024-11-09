@@ -2,6 +2,7 @@ import React from "react"
 import './../styles/Main.css'
 import date from './../images/calendar.svg'
 import arrow from './../images/arrow.svg'
+import Job from "./Job"
 
 function Main() {
     return (
@@ -14,6 +15,8 @@ function Main() {
                 <img src={arrow} alt="Arrow" className="Main_arrow" />
             </div>
         </div>
+
+        <Job />
         
     </div>
     )
