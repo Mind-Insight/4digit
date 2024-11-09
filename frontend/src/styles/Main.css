@@ -37,3 +37,26 @@
     width: 18px;
     height: 10px;
 }
+
+.Main_Content {
+    display: flex;
+}
+
+.Main_left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.JobComp {
+    flex: 2;
+}
+
+.BlockComp {
+    flex: 1;
+}
+
+.UsersComp {
+    flex: 3;
+    width: 1000px;
+}

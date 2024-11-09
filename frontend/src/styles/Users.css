@@ -1,0 +1,101 @@
+.Users_title {
+    font-family: 'SF-Pro';
+    font-size: 32px;
+    padding: 40px 32px;
+}
+
+.table_title {
+    font-family: 'SF-Pro';
+    font-size: 16px;
+    color: #6D6D6D;
+}
+
+.title_table {
+    display: flex;
+    align-items: center;
+}
+
+.table_photo {
+    flex: 1;
+    width: 16px;
+    height: 16px;
+}
+
+.table_name {
+    flex: 3;
+}
+
+.table_phone {
+    flex: 2;
+}
+
+.table_email {
+    flex: 3;
+}
+
+.table_soft {
+    flex: 3;
+}
+
+.Users {
+    background-color: #FFFFFF;
+    border-radius: 45px;
+    padding: 16px;
+}
+
+.User {
+    display: flex;
+    align-items: center;
+    background-color: #F7F9FB;
+    border-radius: 30px;
+    padding: 12px 16px;
+    margin: 13px 0;
+    width: calc(75vw - 140px)
+}
+
+.User_photoBlock {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.User_photo {
+    width: 48px;
+    height: 48px;
+}
+
+.User_nameBlock {
+    flex: 3
+}
+
+.User_phone {
+    flex: 2
+}
+
+.User_email {
+    flex: 3
+}
+
+.User_softBlock {
+    flex: 2;
+}
+
+.User_soft {
+    background-color: #DAFB58;
+    border-radius: 30px;
+    width: 79px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.User_button {
+    flex: 1;
+    width: 18px;
+    height: 10px;
+}
+
+.User_name, .User_age, .User_phone, .User_email, .User_soft {
+    font-family: 'SF-Pro';
+}

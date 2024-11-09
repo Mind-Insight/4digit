@@ -8,6 +8,9 @@ body {
     background-color: #F7F9FB;
     padding: 32px;
     padding-top: 40px;
+    background-image: url('./../images/bg_star.svg');
+    background-repeat: no-repeat;
+    backdrop-filter: blur(80px);
 }
 
 @font-face {
