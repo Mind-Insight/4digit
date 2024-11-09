@@ -13,11 +13,13 @@ VIDEO_DIR = "videos"
 BATCH_SIZE = 8
 NUM_CLASSES = 5  # OCEAN
 
+
 # Функция загрузки данных
 def load_pkl_file(file_path):
     with open(file_path, "rb") as f:
         data = pickle.load(f, encoding="latin1")
     return data
+
 
 # Загрузка данных
 annotations = load_pkl_file("dataset/annotation_training.pkl")
@@ -33,12 +35,13 @@ for key in annotations:
 
 for key in annotations:
     for key1 in annotations[key]:
-        if key == 'interview':
+        if key == "interview":
             continue
         parse[key1].append(annotations[key][key1])
 
 for key in transcriptions:
     parse[key].append(transcriptions[key])
+
 
 # Dataset
 class VideoPersonalityDataset(Dataset):
@@ -56,7 +59,9 @@ class VideoPersonalityDataset(Dataset):
         text = self.parsed_data[key][5] if len(self.parsed_data[key]) > 5 else ""
         video_path = os.path.join(self.video_dir, key)
         video_features = self.extract_video_features(video_path)
-        personality_tensor = torch.tensor(personality_values, dtype=torch.float)
+        personality_tensor = torch.tensor(personality_values, dtype=torch.float).to(
+            "cuda" if torch.cuda.is_available() else "cpu"
+        )
         return video_features, text, personality_tensor
 
     def extract_video_features(self, video_path):
@@ -64,7 +69,6 @@ class VideoPersonalityDataset(Dataset):
         frames = []
 
         while cap.isOpened():
-            print("1" * 100)
             ret, frame = cap.read()
             if not ret:
                 break
@@ -74,9 +78,16 @@ class VideoPersonalityDataset(Dataset):
         cap.release()
         frames = np.array(frames)
         if len(frames) == 0:
-            return torch.zeros(1, 3, 224, 224)
+            return torch.zeros(1, 3, 224, 224).to(
+                "cuda" if torch.cuda.is_available() else "cpu"
+            )
         video_tensor = torch.tensor(frames).permute(0, 3, 1, 2).float()
-        return video_tensor.mean(dim=0).unsqueeze(0)  # Усреднение по времени
+        return (
+            video_tensor.mean(dim=0)
+            .unsqueeze(0)
+            .to("cuda" if torch.cuda.is_available() else "cpu")
+        )  # Усреднение по времени
+
 
 # Модель
 class PersonalityModel(pl.LightningModule):
@@ -88,13 +99,17 @@ class PersonalityModel(pl.LightningModule):
 
     def forward(self, video_features, text_features):
         video_outputs = self.fc_video(video_features.view(video_features.size(0), -1))
-        text_outputs = torch.zeros(video_outputs.size(0), 512)  # Заглушка для текстовых фич
+        text_outputs = torch.zeros(video_outputs.size(0), 512).to(
+            self.device
+        )  # Заглушка для текстовых фич
         combined = torch.cat((video_outputs, text_outputs), dim=1)
         output = self.fc_out(combined)
         return output
 
     def training_step(self, batch, batch_idx):
         video_features, text_inputs, personality = batch
+        video_features = video_features.to(self.device)
+        personality = personality.to(self.device)
         outputs = self.forward(video_features, text_inputs)
         loss = nn.MSELoss()(outputs, personality)
         self.log("train_loss", loss)
@@ -103,25 +118,26 @@ class PersonalityModel(pl.LightningModule):
     def configure_optimizers(self):
         return torch.optim.Adam(self.parameters(), lr=1e-4)
 
+
 # Основной код
 if __name__ == "__main__":
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataset = VideoPersonalityDataset(VIDEO_DIR, parse)
     dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=True)
     for batch in dataloader:
         print("Batch загружен:", batch)
         break  # Проверяем только первый батч
 
-    model = PersonalityModel()
+    model = PersonalityModel().to(device)
 
     # Тренировка
     trainer = Trainer(
-    max_epochs=10,
-    accelerator="gpu" if torch.cuda.is_available() else "cpu",
-    devices=1 if torch.cuda.is_available() else 1  # Для CPU указываем количество ядер (1 или больше)
-)
+        max_epochs=10,
+        accelerator="gpu" if torch.cuda.is_available() else "cpu",
+        devices=1,  # Для CPU указываем количество ядер (1 или больше)
+    )
     trainer.fit(model, dataloader)
 
     # Сохранение модели
     torch.save(model.state_dict(), "personality_model.pth")
     print("Модель сохранена в personality_model.pth")
-
