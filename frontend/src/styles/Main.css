@@ -48,6 +48,10 @@
     flex-direction: column;
 }
 
+.GraphJobsComp {
+    flex: 2;
+}
+
 .JobComp {
     flex: 2;
 }

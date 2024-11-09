@@ -5,6 +5,7 @@ import arrow from './../images/arrow.svg'
 import Job from "./Job"
 import Users from "./Users"
 import Block from "./Block"
+import GraphJobs from "./GraphJobs"
 
 function Main() {
     return (
@@ -21,6 +22,7 @@ function Main() {
                 <div className="Main_left">
                     <Job className="JobComp" />
                     <Block className="BlockComp" />
+                    <GraphJobs className="GraphJobsComp" />
                 </div>
                 <Users className="UsersComp" />
             </div>
