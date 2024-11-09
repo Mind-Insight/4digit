@@ -15,6 +15,7 @@
     padding: 16px;
     border-radius: 30px;
     border: 2px solid #EEEEF1;
+    min-width: 320px;
 }
 
 .Job_name {
@@ -26,10 +27,44 @@
     font-size: 32px;
     font-family: "SF-Pro";
     margin-left: 32px;
+    margin-bottom: 40px;
 }
 
 .Job {
     background-color: #FFF;
     border-radius: 45px;
     padding: 40px 16px 16px;
+    /* ширина работы */
+    width: 384px;
+}
+
+.Job_jobs {
+    min-height: 341px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+}
+
+.dot_active {
+    background-color: #1A1A1A;
+}
+
+.Job_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    justify-content: space-between;
 }

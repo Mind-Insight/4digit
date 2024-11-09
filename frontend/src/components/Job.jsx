@@ -14,7 +14,7 @@ function Job() {
                     <JobSingle name='Backend-разработчик' />
                 </div>
                 <div className="control">
-                    <div className="dot dot1"></div>
+                    <div className="dot dot1 dot_active"></div>
                     <div className="dot dot2"></div>
                     <div className="dot dot3"></div>
                 </div>
