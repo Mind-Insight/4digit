@@ -1,0 +1,50 @@
+.graphJob {
+    background-color: #FFF;
+    border-radius: 45px;
+    padding: 18px 32px 32px 32px;
+    /* ширина работы */
+    width: 384px;
+    height: 273px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.GraphJob_single {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 21px;
+    padding: 0 12px 0 8px;
+    gap: 4px;
+    border-radius: 10px;
+    border: 1px solid #ECECEC;
+
+}
+
+.GraphJob_name {
+    font-size: 14px;
+    font-family: "SF-Pro";
+
+
+}
+
+.dotJob {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    margin-right: 4px;
+}
+
+.jobsLine {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}

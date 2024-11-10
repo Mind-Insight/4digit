@@ -1,0 +1,67 @@
+.Sublim_block {
+    border-radius: 40px;
+    background-image: url("../../images/sublim_block.png");
+    background-size: cover;
+    width: 566px;
+    height: 363px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Sublim_topLine {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 17px 10px 36px;
+
+}
+
+.Sublim_vectorRight {
+    width: 176px;
+    height: 185px;
+    padding-bottom: 20px;
+}
+
+.Sublim_button {
+    border-radius: 27px;
+    background: #FFF;
+    width: 308px;
+    height: 83px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "SF-Pro";
+    font-size: 32px;
+    font-weight: 510;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+.Sublim_desription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 522px;
+    height: 137px;
+
+    color: #fff;
+    font-family: "SF-Pro";
+    font-size: 72px;
+    font-weight: 510;
+
+    padding-bottom: 34px;
+}
+
+.title_description {
+    color: #fff;
+    font-family: "SF-Pro";
+    font-size: 72px;
+    font-weight: 400;
+
+    margin-top: -15px;
+}

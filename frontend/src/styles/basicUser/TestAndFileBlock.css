@@ -1,0 +1,95 @@
+.TestAndFile_block {
+    width: 566px;
+    height: 750px;
+    border-radius: 40px;
+    background: #fff;
+}
+
+.Test_block {
+    height: 363px;
+}
+
+.File_block {
+    margin-top: 24px;
+    height: 363px;
+    border-radius: 28px;
+    border: 4px dashed rgba(109, 109, 109, 0.20);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Test_title {
+    color: #1A1A1A;
+    font-family: "SF-Pro";
+    font-size: 55px;
+
+    padding: 72px 137px 72px 37px;
+}
+
+.review_line {
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.04);
+    display: flex;
+    width: 494px;
+    height: 80px;
+    padding: 0px 4px 0px 36px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 36px;
+}
+
+.button_line {
+    border-radius: 26px;
+    background: #DAFB58;
+    display: flex;
+    width: 156px;
+    height: 72px;
+    padding: 0px 16px 0px 32.97px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_line {
+    color: rgba(0, 0, 0, 0.25);
+    font-family: "SF-Pro";
+    font-size: 20px;
+}
+
+.title_button {
+    color: #000;
+    font-family: "SF-Pro";
+    font-size: 18px;
+}
+
+.arrowUpRight {
+    border-radius: 26px;
+    background: #212121;
+}
+
+.stage_line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding-top: 40px;
+}
+
+.selectFile {
+    color: #6179FB;
+    font-family: "SF-Pro";
+    font-size: 32px;
+    font-weight: 510;
+}
+
+.fileDescription {
+    color: rgba(0, 0, 0, 0.25);
+    font-family: "SF-Pro";
+    font-size: 16px;
+    font-weight: 510;
+
+    padding-top: 10px;
+}

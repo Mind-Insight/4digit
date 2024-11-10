@@ -1,0 +1,51 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header_Logo {
+    width: 48px;
+    height: 48px;
+}
+
+.Header_Theme {
+    width: 64px;
+    height: 64px;
+    background-color: #EEEEF1;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    width: 128px;
+    height: 64px;
+    background-color: #EEEEF1;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.Header_Arrow {
+    padding: 27px;
+}
+
+.Header_ThemeMoon {
+    width: 21px;
+    height: 24px;
+}
+
+.Header_ProfilePhoto {
+    width: 48px;
+    height: 48px;
+    margin: 8px;
+}
+
+.Header_right {
+    display: flex;
+    width: 208px;
+    justify-content: space-between;
+}

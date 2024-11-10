@@ -1,0 +1,44 @@
+.Main {
+    padding-top: 40px;
+}
+
+.Main_title {
+    font-size: 139px;
+    font-family: Benzin;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.title_color {
+    color: #6179FB;
+}
+
+
+.Main_first_block {
+    padding-top: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Main_second_block {
+    padding-top: 24px;
+}
+
+.basketProfessions {
+    padding-top: 24px;
+}
+
+.second_coloum_blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.coloum_left_blocks {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.coloum_right_blocks {
+    flex: 1;
+}

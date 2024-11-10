@@ -1,0 +1,31 @@
+.PartTeam_block {
+    border-radius: 40px;
+    background-image: url("../../images/partTeam_block.png");
+    background-size: cover;
+    width: 624px;
+    height: 363px;
+}
+
+.PartTeam_title {
+    color: #1A1A1A;
+    font-family: "SF-Pro";
+    font-size: 46px;
+    font-weight: 510;
+
+    padding-top: 22px;
+    padding-left: 35px;
+}
+
+.title_spam {
+    color: #6179FB;
+    font-family: "SF-Pro";
+    font-size: 46px;
+    font-style: italic;
+    font-weight: 500;
+
+}
+
+/* .PartTeam_vectorLeft {
+    top: -20px;
+    z-index: 0;
+} */

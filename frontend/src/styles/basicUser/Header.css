@@ -1,0 +1,8 @@
+.Header {
+    display: flex;
+}
+
+.Header_Logo {
+    width: 200px;
+    height: 44px;
+}

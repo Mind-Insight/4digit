@@ -1,13 +1,20 @@
 import React from 'react'
-import Header from './components/Header'
-import Main from './components/Main'
-import './styles/App.css'
+// import HeaderClientAdmin from './components/clientAdmin/Header'
+// import MainClientAdmin from './components/clientAdmin/Main'
+
+import HeaderBasicUser from './components/basicUser/Header'
+import MainBasicUser from './components/basicUser/Main'
+
+// import './styles/clientAdmin/App.css'
+import './styles/basicUser/App.css'
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
+      {/* <HeaderClientAdmin />
+      <MainClientAdmin /> */}
+      <HeaderBasicUser />
+      <MainBasicUser />
     </div>
   )
 }

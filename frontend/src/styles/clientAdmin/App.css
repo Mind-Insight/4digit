@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F7F9FB;
+    padding: 32px;
+    padding-top: 40px;
+    background-image: url('../../images/bg_star.svg');
+    background-repeat: no-repeat;
+    backdrop-filter: blur(80px);
+}
+
+@font-face {
+    font-family: 'SF-Pro';
+    src: url('../../fonts/SF-Pro.ttf');
+}
