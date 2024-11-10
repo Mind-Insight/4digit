@@ -1,0 +1,208 @@
+.UserProp {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoBlock {
+    height: 295px;
+    flex: 1;
+    border: 2px solid #EEEEF1;
+    border-radius: 30px;
+    padding: 31px 8px 16px;
+    margin: 8px;
+}
+
+.UserContent {
+    flex: 2;
+}
+
+.VideoPlayer {
+    height: 208px;
+    border-radius: 30px;
+}
+
+.videoTitle {
+    font-size: 24px;
+    font-family: "SF-Pro";
+}
+
+.videoTitleBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.UserContent-top {
+    display: flex;
+}
+
+.UserSoftHard {
+    flex: 1;
+    border-radius: 30px;
+    background-color: #FFF;
+    padding: 16px 16px 42px;
+    margin: 8px;
+}
+
+.UserType {
+    flex: 1;
+}
+
+.progress {
+    height: 48px;
+    text-align: center;
+    font-family: "SF-Pro";
+    line-height: 48px;
+    border-radius: 17px;
+    font-size: 8px;
+}
+
+.progressSoft {
+    background-color: #6179FB;
+    color: #FFF;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.progressHard {
+    width: 244px;
+    background-color: #ECECEC;
+    margin-bottom: 33px;
+    font-size: 16px;
+}
+
+.progressInfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.progressInfoSoft, .progressInfoHard {
+    font-family: "SF-Pro";
+    font-size: 16px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.progressInfoSoft::before,
+.progressInfoHard::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.progressInfoSoft::before {
+    background-color: #6179FB;
+}
+
+.progressInfoHard::before {
+    background-color: #ECECEC;
+}
+
+.UserType {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #ECECEC;
+    border-radius: 30px;
+    padding: 16px;
+    margin: 8px;
+}
+
+.UserType-title {
+    font-size: 24px;
+    font-family: "SF-Pro";
+}
+
+.UserType-MBTI {
+    background-color: #6179FB;
+    border-radius: 16px;
+    color: white;
+    font-family: "SF-Pro";
+    padding: 17px;
+}
+
+.UserType-Ocean {
+    background-color: #ECECEC;
+    border-radius: 16px;
+    color: black;
+    font-family: "SF-Pro";
+    padding: 17px;
+}
+
+.UserContent-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-btn {
+    flex: 2;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.invite {
+    flex: 3;
+    background-color: #DAFB58;
+    height: 64px;
+    border-radius: 30px;
+}
+
+.closeBlock {
+    flex: 1;
+    margin: 8px;
+}
+
+.close {
+    height: 64px;
+    width: 64px;
+    background-color: #EEEEF1;
+    border-radius: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invite-href, .resume-href {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6179FB;
+    border-radius: 40px;
+}
+
+.invite-href {
+    background-color: #000;
+}
+
+.resume-btn, .invite {
+    padding-left: 32px;
+    padding-right: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+}
+
+.invite-text {
+    color: #000;
+    font-family: "SF-Pro";
+    font-size: 16px;
+}
+
+.resume-text {
+    color: #1A1A1A;
+    font-family: "SF-Pro";
+    font-size: 20px;
+}
