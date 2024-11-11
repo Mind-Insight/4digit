@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Результаты анализа видео{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1 class="display-4">Результаты анализа видео</h1>
+</div>
+
+<div class="row">
+    {% for result in results %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ result.video_name }}</h5>
+                    <h6 class="card-subtitle text-muted mb-2">
+                        Загрузил: {{ result.uploaded_at|date:"d.m.Y H:i" }}
+                    </h6>
+                    <p class="card-text">
+                        <strong>Тип личности (OCEAN):</strong>
+                        <ul>
+                            {% for trait, value in result.personality_traits.items %}
+                                <li>{{ trait|title }}: {{ value|floatformat:2 }}</li>
+                            {% endfor %}
+                        </ul>
+                        <strong>Текст:</strong>
+                        <span>{{ result.transcription|truncatechars:100 }}</span>
+                    </p>
+                    <a href="{% url 'home' %}" class="btn btn-primary btn-sm">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="text-center mt-4">
+    <a href="{% url 'upload_video' %}" class="btn btn-success">Загрузить новое видео</a>
+</div>
+{% endblock %}

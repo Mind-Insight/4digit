@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Результат анализа{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1 class="display-4">Результат анализа</h1>
+</div>
+
+<div class="card shadow-sm p-4">
+    <h5 class="card-title">Анализ завершен!</h5>
+    <p class="card-text">
+        <strong>Тип личности (OCEAN):</strong>
+        <ul>
+            {% for trait in personality_traits %}
+                <li>{{ trait }}</li>
+            {% endfor %}
+        </ul>
+        <strong>Распознанный текст:</strong>
+        <p>{{ transcription }}</p>
+    </p>
+</div>
+
+<div class="text-center mt-4">
+    <a href="{% url 'analysis_list' %}" class="btn btn-secondary">Вернуться к списку</a>
+</div>
+{% endblock %}

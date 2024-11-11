@@ -1,0 +1,18 @@
+.CompleteGame_block {
+    margin-top: 24px;
+    border-radius: 40px;
+    background-image: url("../../images/completeGame_block.png");
+    background-size: cover;
+    width: 624px;
+    height: 363px;
+}
+
+.CG_title_block {
+    color: #000;
+    text-align: right;
+    font-family: "SF-Pro";
+    font-size: 58px;
+    font-weight: 510;
+    padding-top: 250px;
+    padding-right: 50px;
+}

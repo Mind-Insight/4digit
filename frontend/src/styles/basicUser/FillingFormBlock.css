@@ -1,0 +1,16 @@
+.FillingForm_block {
+    border-radius: 40px;
+    background-image: url("../../images/fillingForm_block.png");
+    background-size: cover;
+    width: 624px;
+    height: 363px;
+}
+
+.FF_title_block {
+    color: #FFF;
+    font-family: "SF-Pro";
+    font-size: 58px;
+    font-weight: 510;
+    padding-top: 14px;
+    padding-left: 34px;
+}
